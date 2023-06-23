@@ -12,5 +12,7 @@ urlpatterns = [
     path('authors/<int:author_id>/', views.author, name='author'),
     path('tag/<slug:tag_slug>/page/<int:page>/', views.search_by_tag, name='quotes_by_tag'),
     path('scrape/', views.scrape_quotes, name='scrape_quotes'),
+    path('password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
+    path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
     # Ви можете додати інші шляхи тут, якщо потрібно
 ]
